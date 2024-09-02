@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=node && node dist/index.js"
   },
-  "author": "Your Name",
-  "license": "ISC",
+  "author": "Andrei Starovoit",
+  "license": "MIT",
   "dependencies": {
     "node-telegram-bot-api": "^0.66.0",
     "dotenv": "^16.4.5"
