@@ -1,12 +1,16 @@
 # Compiled class file
 *.class
 
+# project files
 node_modules
 .idea
+dist
 package-lock.json
+.env
 
 # Log file
 *.log
+
 
 # BlueJ files
 *.ctxt

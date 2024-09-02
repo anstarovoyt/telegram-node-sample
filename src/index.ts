@@ -1,7 +1,10 @@
 import TelegramBot from 'node-telegram-bot-api';
+import 'dotenv/config';
+
+console.log("Starting the bot ...");
 
 // Replace with your own Telegram Bot API token
-const token = 'YOUR_TELEGRAM_BOT_TOKEN';
+const token = process.env.TELEGRAM_BOT_TOKEN;
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {
@@ -12,6 +15,8 @@ const bot = new TelegramBot(token, {
 bot.on('message', (msg: TelegramBot.Message) => {
     const chatId = msg.chat.id;
 
-    // Send a message back
+    console.log("Received a message");
     void bot.sendMessage(chatId, 'Hello! Welcome to your Telegram bot.');
 });
+
+console.log("Started");

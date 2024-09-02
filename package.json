@@ -4,16 +4,17 @@
   "description": "A simple Telegram bot",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "dev": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=node && node dist/index.js"
   },
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
-    "node-telegram-bot-api": "^0.66.0"
+    "node-telegram-bot-api": "^0.66.0",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@types/node-telegram-bot-api": "^0.64.7",
-    "vite": "^5.4.2",
+    "esbuild": "^0.23.1",
     "@types/node": "^22.5.2",
     "typescript": "^5.5.4"
   }
